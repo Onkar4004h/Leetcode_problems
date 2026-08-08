@@ -1,30 +1,22 @@
-nums = [2,-1,-4]
-ans_array = []
-
-
-x=0
-i =0
-j = i+1
-len_ofNums= len(nums)
-while x!=len_ofNums and i<len(nums):
-    y = -nums[x]
-    if x==j:
-         j+=1
-
-    if j==len_ofNums:
-        # if x<len(nums):
-
-        i= 0
-        j=i+1
-         
-    if nums[i]+nums[j]==y:
-        ans_array.append([nums[x],nums[i],nums[j]])
-        x+=1
-    i+=1
-    j+=1
+nums = [-1,0,1,2,-1,-4]
+nums.sort()
+for j in range(len(nums)-1,-1,-1):
+    if nums[j]<1:
+        print(j)
+        break
+index = j    
+x=len(nums)-1
+i=0
+while x!=index:
+    if nums[i]+nums[j]!=(-nums[x]):
+       j-=1
+    elif i==j:
+            continue   
+     
+    elif i ==0 and j ==i+1:
+        i+=1
+        j = index
+    else:
+        j=index      
     
-    if (-y) != nums[x]:
-        i=0
-        j=i+1
-
-print(ans_array)
+       
