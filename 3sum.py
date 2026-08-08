@@ -1,28 +1,30 @@
-nums = [-100,-70,-60,110,120,130,160]
+nums = [2,-1,-4]
 ans_array = []
-check_array = []
-i=0
-j=i+1
-k=len(nums)-1
 
-while j<len(nums) and k>=0:
-    if nums[i]+nums[j]+nums[k]==0:
-        if i != j and i != k and j != k:
-            # ans_array.append(([nums[i],nums[j],nums[k]]))
-            
-            x = [nums[i],nums[j],nums[k]]
-            x.sort()
-            if x not in ans_array:
-                    ans_array.append(x)
-            i+=1
-            j+=1
-            k=len(nums)-1
-    if k==0:
-     i+=1
-     j+=1
-    else:        
-     k-=1
+
+x=0
+i =0
+j = i+1
+len_ofNums= len(nums)
+while x!=len_ofNums and i<len(nums):
+    y = -nums[x]
+    if x==j:
+         j+=1
+
+    if j==len_ofNums:
+        # if x<len(nums):
+
+        i= 0
+        j=i+1
+         
+    if nums[i]+nums[j]==y:
+        ans_array.append([nums[x],nums[i],nums[j]])
+        x+=1
+    i+=1
+    j+=1
     
-print(ans_array)
-          
+    if (-y) != nums[x]:
+        i=0
+        j=i+1
 
+print(ans_array)
