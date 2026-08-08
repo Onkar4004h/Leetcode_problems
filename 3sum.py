@@ -1,4 +1,4 @@
-nums = [-1,0,1,2,-1]
+nums = [-1,-1,0,1,2]
 nums.sort()
 i = 0
 j = len(nums) - 1
@@ -13,10 +13,12 @@ while x < len_ and i < len(nums) and j < len(nums):
                 x+=1   
                 i=0
                 j=len_-1
-            elif nums[x] < nums[i]:
+            elif nums[x] < nums[i] + nums[j]:
                 j-=1
-            elif nums[x] > nums[i]:
+            elif nums[x] > nums[i] + nums[j]:
                 i+=1
+            elif nums[i] + nums[j] == nums[x]:
+                j-=1
         else:
             x+=1
             i=0
