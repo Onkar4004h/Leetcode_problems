@@ -1,5 +1,5 @@
-nums = [1]
-key =1
+nums = [2,3,9,3,5,9,2,1]
+key =9
 k = 1
 i = 0
 ans_array = []
