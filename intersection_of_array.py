@@ -1,18 +1,18 @@
-nums1 = [1,2,2,1]
-nums2 = [2,2]
+nums1 = [4,9,5]
+nums2 = [9,4,9,8,4]
 ans_array = []
-if len(nums1)>len(nums2):
-    
-    seen = set(nums2)
-    for x in seen:
-     if x in nums1:
-        ans_array.append(x)
+freq={}
+for x in nums1:
+    if x in freq:
+        freq[x]+=1
+    else:
+        freq[x]=1
+for y in nums2:
+    if y in freq and freq[y]>0:
+        ans_array.append(y) 
+        freq[y]-=1
+print(ans_array)                   
 
-else:
-    seen = set(nums1)
-    for x in seen:
-         if x in nums2:
-            ans_array.append(x)
-print(ans_array)            
+
     
 
