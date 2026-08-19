@@ -11,7 +11,7 @@ for y in nums2:
     if y in freq and freq[y]>0:
         ans_array.append(y) 
         freq[y]-=1
-print(ans_array)                   
+                 
 
 
     
