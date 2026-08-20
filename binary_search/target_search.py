@@ -5,18 +5,18 @@ def target_search(nums,target):
     if l == r:
         if nums[l] == target:
             return l
-    while True:
+    while l<=r:
+        mid = (l+r)//2
     
         if nums[mid]<target:
-            l = mid
+            l = mid + 1
         if nums[mid]> target:
-            r = mid
+            r = mid - 1
         if nums[mid]==target:
             return mid
-        mid = (l+r)//2
     return -1 
 
-nums = [2, 5]
-print(target_search(nums,5))                    
+nums = [-1,0,3,5,9,12]
+print(target_search(nums,2))                    
 
     

@@ -23,7 +23,8 @@ def merge_sort(nums):
     while len(right)>r:
         ans_array[k]=right[r]
         r+=1
-        k+=1        
+        k+=1
     return ans_array
 
-print(merge_sort([8,4,3,6]))
+print(merge_sort([2,6,8,3]))
+print(merge_sort([2,6,9,10,2]))    
