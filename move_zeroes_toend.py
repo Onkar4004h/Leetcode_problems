@@ -17,8 +17,7 @@ while r<len(nums) and l<len(nums):
 
 
 
-
-print(nums)        
+    
 
 
 
