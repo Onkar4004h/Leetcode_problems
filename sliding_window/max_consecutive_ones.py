@@ -13,4 +13,16 @@ def max_consecutive_one(nums,k):
             answer=max(answer,r-l+1)           
             
     return answer            
-print(max_consecutive_one([1,1,1,0,0,0,1,1,1,1,0],2))                
+# print(max_consecutive_one([1,1,1,0,0,0,1,1,1,1,0],2))
+def max_conse(nums,k):
+    zc=0
+    l=0
+    for i in nums:
+        if i ==0:
+            zc+=1
+        while zc>k:
+            if nums[l]==0:
+                zc-=1
+            l+=1
+    return len(nums)-l
+print(max_conse([1,1,1,0,0,0,1,1,1,1,0],2))                                
